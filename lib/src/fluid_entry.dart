@@ -1,5 +1,5 @@
-import 'package:fluid_storage/src/fluid_storage.dart';
 import 'package:fluid_storage/src/fluid_storage_base.dart';
+import 'package:fluid_storage/src/fluid_storage_manager.dart';
 
 abstract class FluidEntry<ValueType, DefaultValueType extends ValueType?> {
   final String key;
@@ -13,8 +13,8 @@ abstract class FluidEntry<ValueType, DefaultValueType extends ValueType?> {
   });
 
   FluidStorageBase get prefs => isSecure
-      ? FluidStorage.i.secureStorage
-      : FluidStorage.i.sharedPreferences;
+      ? FluidStorageManager.i.secureStorage
+      : FluidStorageManager.i.sharedPreferences;
 
   Future<bool> write(ValueType value) async {
     return await prefs.write<ValueType>(key, value);
