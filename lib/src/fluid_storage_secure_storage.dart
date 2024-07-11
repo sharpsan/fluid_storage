@@ -46,15 +46,15 @@ class FluidStorageSecureStorage extends FluidStorageBase {
     dynamic mutatedValue;
     if (T == dynamic) {
       mutatedValue = stringValue as dynamic;
-    } else if (T == String) {
+    } else if (T == String || T == getType<String?>()) {
       mutatedValue = stringValue;
-    } else if (T == int) {
+    } else if (T == int || T == getType<int?>()) {
       mutatedValue = int.parse(stringValue);
-    } else if (T == double) {
+    } else if (T == double || T == getType<double?>()) {
       mutatedValue = double.parse(stringValue);
-    } else if (T == bool) {
+    } else if (T == bool || T == getType<bool?>()) {
       mutatedValue = stringValue == 'true';
-    } else if (T == List) {
+    } else if (T == List || T == getType<List<String>?>()) {
       mutatedValue = json.decode(stringValue);
     } else {
       /// Should be unreachable

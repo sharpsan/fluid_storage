@@ -45,15 +45,15 @@ class FluidStorageSharedPreferences extends FluidStorageBase {
   Future<T?> read<T>(String key) async {
     if (T == dynamic) {
       return _prefs.get(key) as dynamic;
-    } else if (T == String) {
+    } else if (T == String || T == getType<String?>()) {
       return _prefs.getString(key) as T?;
-    } else if (T == int) {
+    } else if (T == int || T == getType<int?>()) {
       return _prefs.getInt(key) as T?;
-    } else if (T == double) {
+    } else if (T == double || T == getType<double?>()) {
       return _prefs.getDouble(key) as T?;
-    } else if (T == bool) {
+    } else if (T == bool || T == getType<bool?>()) {
       return _prefs.getBool(key) as T?;
-    } else if (T == List<String>) {
+    } else if ((T == List<String>) || T == getType<List<String>?>()) {
       return _prefs.getStringList(key) as T?;
     } else {
       /// Should be unreachable

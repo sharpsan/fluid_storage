@@ -21,7 +21,7 @@ abstract class FluidEntry<ValueType, DefaultValueType extends ValueType?> {
   }
 
   Future<DefaultValueType> read() async {
-    return await prefs.read(key) ?? defaultValue;
+    return await prefs.read<DefaultValueType>(key) ?? defaultValue;
   }
 
   Future<bool> delete() async {

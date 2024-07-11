@@ -33,4 +33,6 @@ abstract class FluidStorageBase {
     }
     return isSupported;
   }
+
+  Type getType<T>() => T;
 }
