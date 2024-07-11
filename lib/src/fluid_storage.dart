@@ -8,6 +8,7 @@ class FluidStorage<T> {
   /// storage manager
   final storage = FluidStorageManager.i;
 
+  /// holds all storage entries
   T entries;
 
   Future<void> ready() async {
