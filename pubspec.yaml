@@ -1,11 +1,10 @@
 name: fluid_storage
 description: Fluid item storage for Flutter.
 version: 0.1.0
-# repository: https://github.com/my_org/my_repo
+repository: https://github.com/sharpsan/fluid_storage
 environment:
   sdk: ^3.3.4
 
-# Add regular dependencies here.
 dependencies:
   flutter_secure_storage: ^9.2.2
   shared_preferences: ^2.2.3
