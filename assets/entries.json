@@ -1,0 +1,9 @@
+{
+  "entries": {
+    "key": "pref_key",
+    "is_secure": false,
+    "type": "string",
+    "default_type": "string",
+    "default_value": "string"
+  }
+}
