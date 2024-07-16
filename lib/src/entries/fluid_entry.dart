@@ -1,7 +1,7 @@
 import 'package:fluid_storage/src/fluid_storage_base.dart';
 import 'package:fluid_storage/src/fluid_storage_manager.dart';
 
-abstract class FluidEntry<ValueType, DefaultValueType extends ValueType?> {
+class FluidEntry<ValueType, DefaultValueType extends ValueType?> {
   final String key;
   final DefaultValueType defaultValue;
   final bool isSecure;
